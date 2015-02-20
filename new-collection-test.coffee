@@ -78,8 +78,7 @@ describe '/data/collection/:collection_id', ->
     describe 'validating collection name', ->
       it 'should validate collection names', ->
         arr = ['%a' ,'a1', 'aa', 'a-', '1a', '-a']
-        rxName = /^[a-z][a-z0-9\-]*$/
-        ##rxName = /^[0-9a-z\-]+$/
+        rxName = /^[0-9a-z\-]+$/
         
         for i in arr
           isError = !rxName.test(i.toLowerCase())
